@@ -24,9 +24,9 @@ section {
 
 /* SLIDE */
 
-/* .slide {
+.slide {
     display: none;
-} */
+}
 
 .slide.active {
     display: block;

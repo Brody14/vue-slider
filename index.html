@@ -14,7 +14,7 @@
     <section id="app">
             <div class="container">
                 <div class="carousel">
-                    <div v-for="slide in slides" class="slide">
+                    <div v-for="(slide, index) in slides" class="slide" :class="(index === 0) ? 'active' : ''">
                         <img :src="slide.imgSrc" alt="">
                         <div class="slide-body">
                             <h2>{{ slide.title }}</h2>

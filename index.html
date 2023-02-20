@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://kit.fontawesome.com/c5d4023dee.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -13,11 +14,11 @@
     <section id="app">
             <div class="container">
                 <div class="carousel">
-                    <div class="slide">
-                        <img src="" alt="">
+                    <div v-for="slide in slides" class="slide">
+                        <img :src="slide.imgSrc" alt="">
                         <div class="slide-body">
-                            <h2></h2>
-                            <p></p>
+                            <h2>{{ slide.title }}</h2>
+                            <p>{{ slide.description }}</p>
                         </div>
                     </div>
                     <div class='arrow arrow-left'>

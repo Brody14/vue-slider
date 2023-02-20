@@ -14,18 +14,18 @@
     <section id="app">
             <div class="container">
                 <div class="carousel">
-                    <div v-for="(slide, index) in slides" :class="['slide', (index === 0) ? 'active' : '']">
+                    <div v-for="(slide, index) in slides" :class="['slide', (index === currentIndex) ? 'active' : '']">
                         <img :src="slide.imgSrc" alt="">
                         <div class="slide-body">
-                            <h2>{{ slide.title }}</h2>
-                            <p>{{ slide.description }}</p>
+                            <h2 class="slide-body__title">{{ slide.title }}</h2>
+                            <p class="slide-body__description">{{ slide.description }}</p>
                         </div>
                     </div>
-                    <div class='arrow arrow-left'>
+                    <div class='arrow arrow-left' @click="anticlockwise">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
     
-                    <div class='arrow arrow-right'>
+                    <div class='arrow arrow-right' @click="clockwise">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                    
